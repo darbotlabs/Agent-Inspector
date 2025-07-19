@@ -477,7 +477,7 @@ export function useConnection({
         });
       } catch (error) {
         console.error(
-          `Failed to connect to MCP Server via the MCP Inspector Proxy: ${mcpProxyServerUrl}:`,
+          `Failed to connect to MCP Server via the Agent MCP Inspector Proxy: ${mcpProxyServerUrl}:`,
           error,
         );
 

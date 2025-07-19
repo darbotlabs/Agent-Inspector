@@ -28,7 +28,7 @@ export type ConnectionStatus =
 export const DEFAULT_MCP_PROXY_LISTEN_PORT = "6277";
 
 /**
- * Default configuration for the MCP Inspector, Currently persisted in local_storage in the Browser.
+ * Default configuration for the Agent MCP Inspector, Currently persisted in local_storage in the Browser.
  * Future plans: Provide json config file + Browser local_storage to override default values
  **/
 export const DEFAULT_INSPECTOR_CONFIG: InspectorConfig = {
@@ -54,7 +54,7 @@ export const DEFAULT_INSPECTOR_CONFIG: InspectorConfig = {
   MCP_PROXY_FULL_ADDRESS: {
     label: "Inspector Proxy Address",
     description:
-      "Set this if you are running the MCP Inspector Proxy on a non-default address. Example: http://10.1.1.22:5577",
+      "Set this if you are running the Agent MCP Inspector Proxy on a non-default address. Example: http://10.1.1.22:5577",
     value: "",
     is_session_item: false,
   },
