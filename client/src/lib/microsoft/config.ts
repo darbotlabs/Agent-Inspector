@@ -30,7 +30,9 @@ export const DEFAULT_MICROSOFT_CONFIG: MicrosoftIntegrationSettings = {
       "https://graph.microsoft.com/.default",
       "https://api.powerplatform.com/user_impersonation",
     ],
-    redirectUri: window?.location?.origin + "/oauth/microsoft/callback",
+    redirectUri: (typeof window !== "undefined" && window?.location?.origin)
+      ? window.location.origin + "/oauth/microsoft/callback"
+      : process.env.SSR_REDIRECT_URI || "http://localhost/oauth/microsoft/callback",
   },
   copilotStudio: {
     environmentUrl: "",
