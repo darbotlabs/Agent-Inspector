@@ -126,7 +126,8 @@ export class PacCliService {
   }
 
   async deleteConnector(connectorId: string): Promise<string> {
-    return await this.executeCommand("connector", [
+    return await this.executeCommand("pac", [
+      "connector",
       "delete",
       "--connector-id",
       connectorId,
