@@ -93,7 +93,7 @@ export class PacCliService {
     if (environmentUrl) {
       args.push("--environment", environmentUrl);
     }
-    await this.executeCommand("", args);
+    await this.executeCommand(this.config.cliPath, args);
   }
 
   async logout(): Promise<void> {
