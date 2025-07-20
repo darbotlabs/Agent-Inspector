@@ -97,7 +97,7 @@ export class PacCliService {
   }
 
   async logout(): Promise<void> {
-    await this.executeCommand("auth", ["clear"]);
+    await this.executeCommand("pac", ["auth", "clear"]);
   }
 
   async listEnvironments(): Promise<string> {
