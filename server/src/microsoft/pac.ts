@@ -101,7 +101,7 @@ export class PacCliService {
   }
 
   async listEnvironments(): Promise<string> {
-    return await this.executeCommand("admin", ["list"]);
+    return await this.executeCommand("pac", ["admin", "list"]);
   }
 
   async createConnector(connectorConfig: MCPConnectorConfig): Promise<string> {
