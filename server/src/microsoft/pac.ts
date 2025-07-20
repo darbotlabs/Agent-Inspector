@@ -135,7 +135,7 @@ export class PacCliService {
   }
 
   async listConnectors(): Promise<string> {
-    return await this.executeCommand("connector", ["list"]);
+    return await this.executeCommand(this.config.cliPath || "pac", ["connector", "list"]);
   }
 
   async exportConnector(
