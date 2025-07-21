@@ -1,15 +1,15 @@
-# MCP Inspector
+# Agent MCP Inspector
 
-The MCP inspector is a developer tool for testing and debugging MCP servers.
+The Agent MCP Inspector is an advanced developer tool for testing, debugging, and creating MCP servers with Microsoft Copilot Studio integration.
 
-![MCP Inspector Screenshot](https://raw.githubusercontent.com/modelcontextprotocol/inspector/main/mcp-inspector.png)
+![Agent MCP Inspector Screenshot](https://raw.githubusercontent.com/darbotlabs/Agent-MCP-Inspector/main/mcp-inspector.png)
 
 ## Architecture Overview
 
-The MCP Inspector consists of two main components that work together:
+The Agent MCP Inspector consists of two main components that work together:
 
-- **MCP Inspector Client (MCPI)**: A React-based web UI that provides an interactive interface for testing and debugging MCP servers
-- **MCP Proxy (MCPP)**: A Node.js server that acts as a protocol bridge, connecting the web UI to MCP servers via various transport methods (stdio, SSE, streamable-http)
+- **Agent MCP Inspector Client (AMCI)**: A React-based web UI that provides an interactive interface for testing and debugging MCP servers, with Microsoft integration capabilities
+- **MCP Proxy (MCPP)**: A Node.js server that acts as a protocol bridge, connecting the web UI to MCP servers via various transport methods (stdio, SSE, streamable-http), with support for Microsoft services
 
 Note that the proxy is not a network proxy for intercepting traffic. Instead, it functions as both an MCP client (connecting to your MCP server) and an HTTP server (serving the web UI), enabling browser-based interaction with MCP servers that use different transport protocols.
 
@@ -24,7 +24,7 @@ Note that the proxy is not a network proxy for intercepting traffic. Instead, it
 To get up and running right away with the UI, just execute the following:
 
 ```bash
-npx @modelcontextprotocol/inspector
+npx @darbotlabs/agent-mcp-inspector
 ```
 
 The server will start up and the UI will be accessible at `http://localhost:6274`.
@@ -34,36 +34,36 @@ The server will start up and the UI will be accessible at `http://localhost:6274
 To inspect an MCP server implementation, there's no need to clone this repo. Instead, use `npx`. For example, if your server is built at `build/index.js`:
 
 ```bash
-npx @modelcontextprotocol/inspector node build/index.js
+npx @darbotlabs/agent-mcp-inspector node build/index.js
 ```
 
 You can pass both arguments and environment variables to your MCP server. Arguments are passed directly to your server, while environment variables can be set using the `-e` flag:
 
 ```bash
 # Pass arguments only
-npx @modelcontextprotocol/inspector node build/index.js arg1 arg2
+npx @darbotlabs/agent-mcp-inspector node build/index.js arg1 arg2
 
 # Pass environment variables only
-npx @modelcontextprotocol/inspector -e key=value -e key2=$VALUE2 node build/index.js
+npx @darbotlabs/agent-mcp-inspector -e key=value -e key2=$VALUE2 node build/index.js
 
 # Pass both environment variables and arguments
-npx @modelcontextprotocol/inspector -e key=value -e key2=$VALUE2 node build/index.js arg1 arg2
+npx @darbotlabs/agent-mcp-inspector -e key=value -e key2=$VALUE2 node build/index.js arg1 arg2
 
 # Use -- to separate inspector flags from server arguments
-npx @modelcontextprotocol/inspector -e key=$VALUE -- node build/index.js -e server-flag
+npx @darbotlabs/agent-mcp-inspector -e key=$VALUE -- node build/index.js -e server-flag
 ```
 
-The inspector runs both an MCP Inspector (MCPI) client UI (default port 6274) and an MCP Proxy (MCPP) server (default port 6277). Open the MCPI client UI in your browser to use the inspector. (These ports are derived from the T9 dialpad mapping of MCPI and MCPP respectively, as a mnemonic). You can customize the ports if needed:
+The inspector runs both an Agent MCP Inspector (AMCI) client UI (default port 6274) and an MCP Proxy (MCPP) server (default port 6277). Open the AMCI client UI in your browser to use the inspector. (These ports are derived from the T9 dialpad mapping of MCPI and MCPP respectively, as a mnemonic). You can customize the ports if needed:
 
 ```bash
-CLIENT_PORT=8080 SERVER_PORT=9000 npx @modelcontextprotocol/inspector node build/index.js
+CLIENT_PORT=8080 SERVER_PORT=9000 npx @darbotlabs/agent-mcp-inspector node build/index.js
 ```
 
 For more details on ways to use the inspector, see the [Inspector section of the MCP docs site](https://modelcontextprotocol.io/docs/tools/inspector). For help with debugging, see the [Debugging guide](https://modelcontextprotocol.io/docs/tools/debugging).
 
 ### Servers File Export
 
-The MCP Inspector provides convenient buttons to export server launch configurations for use in clients such as Cursor, Claude Code, or the Inspector's CLI. The file is usually called `mcp.json`.
+The Agent MCP Inspector provides convenient buttons to export server launch configurations for use in clients such as Cursor, Claude Code, or the Inspector's CLI. The file is usually called `mcp.json`.
 
 - **Server Entry** - Copies a single server configuration entry to your clipboard. This can be added to your `mcp.json` file inside the `mcpServers` object with your preferred server name.
 
@@ -135,11 +135,11 @@ The inspector supports bearer token authentication for SSE connections. Enter yo
 
 ### Security Considerations
 
-The MCP Inspector includes a proxy server that can run and communicate with local MCP processes. The proxy server should not be exposed to untrusted networks as it has permissions to spawn local processes and can connect to any specified MCP server.
+The Agent MCP Inspector includes a proxy server that can run and communicate with local MCP processes. The proxy server should not be exposed to untrusted networks as it has permissions to spawn local processes and can connect to any specified MCP server.
 
 #### Authentication
 
-The MCP Inspector proxy server requires authentication by default. When starting the server, a random session token is generated and printed to the console:
+The Agent MCP Inspector proxy server requires authentication by default. When starting the server, a random session token is generated and printed to the console:
 
 ```
 🔑 Session token: 3a1c267fad21f7150b7d624c160b7f09b0b8c4f623c7107bbf13378f051538d4
@@ -174,7 +174,7 @@ MCP_PROXY_AUTH_TOKEN=$(openssl rand -hex 32) npm start
 
 #### Local-only Binding
 
-By default, both the MCP Inspector proxy server and client bind only to `localhost` to prevent network access. This ensures they are not accessible from other devices on the network. If you need to bind to all interfaces for development purposes, you can override this with the `HOST` environment variable:
+By default, both the Agent MCP Inspector proxy server and client bind only to `localhost` to prevent network access. This ensures they are not accessible from other devices on the network. If you need to bind to all interfaces for development purposes, you can override this with the `HOST` environment variable:
 
 ```bash
 HOST=0.0.0.0 npm start
@@ -184,7 +184,7 @@ HOST=0.0.0.0 npm start
 
 #### DNS Rebinding Protection
 
-To prevent DNS rebinding attacks, the MCP Inspector validates the `Origin` header on incoming requests. By default, only requests from the client origin are allowed (respects `CLIENT_PORT` if set, defaulting to port 6274). You can configure additional allowed origins by setting the `ALLOWED_ORIGINS` environment variable (comma-separated list):
+To prevent DNS rebinding attacks, the Agent MCP Inspector validates the `Origin` header on incoming requests. By default, only requests from the client origin are allowed (respects `CLIENT_PORT` if set, defaulting to port 6274). You can configure additional allowed origins by setting the `ALLOWED_ORIGINS` environment variable (comma-separated list):
 
 ```bash
 ALLOWED_ORIGINS=http://localhost:6274,http://localhost:8000 npm start
@@ -192,14 +192,14 @@ ALLOWED_ORIGINS=http://localhost:6274,http://localhost:8000 npm start
 
 ### Configuration
 
-The MCP Inspector supports the following configuration settings. To change them, click on the `Configuration` button in the MCP Inspector UI:
+The Agent MCP Inspector supports the following configuration settings. To change them, click on the `Configuration` button in the Agent MCP Inspector UI:
 
 | Setting                                 | Description                                                                                                                                       | Default |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | `MCP_SERVER_REQUEST_TIMEOUT`            | Timeout for requests to the MCP server (ms)                                                                                                       | 10000   |
 | `MCP_REQUEST_TIMEOUT_RESET_ON_PROGRESS` | Reset timeout on progress notifications                                                                                                           | true    |
 | `MCP_REQUEST_MAX_TOTAL_TIMEOUT`         | Maximum total timeout for requests sent to the MCP server (ms) (Use with progress notifications)                                                  | 60000   |
-| `MCP_PROXY_FULL_ADDRESS`                | Set this if you are running the MCP Inspector Proxy on a non-default address. Example: http://10.1.1.22:5577                                      | ""      |
+| `MCP_PROXY_FULL_ADDRESS`                | Set this if you are running the Agent MCP Inspector Proxy on a non-default address. Example: http://10.1.1.22:5577                                | ""      |
 | `MCP_AUTO_OPEN_ENABLED`                 | Enable automatic browser opening when inspector starts (works with authentication enabled). Only as environment var, not configurable in browser. | true    |
 
 These settings can be adjusted in real-time through the UI and will persist across sessions.
@@ -207,7 +207,7 @@ These settings can be adjusted in real-time through the UI and will persist acro
 The inspector also supports configuration files to store settings for different MCP servers. This is useful when working with multiple servers or complex configurations:
 
 ```bash
-npx @modelcontextprotocol/inspector --config path/to/config.json --server everything
+npx @darbotlabs/agent-mcp-inspector --config path/to/config.json --server everything
 ```
 
 Example server configuration file:
@@ -287,41 +287,41 @@ npm start
 CLI mode enables programmatic interaction with MCP servers from the command line, ideal for scripting, automation, and integration with coding assistants. This creates an efficient feedback loop for MCP server development.
 
 ```bash
-npx @modelcontextprotocol/inspector --cli node build/index.js
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js
 ```
 
 The CLI mode supports most operations across tools, resources, and prompts. A few examples:
 
 ```bash
 # Basic usage
-npx @modelcontextprotocol/inspector --cli node build/index.js
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js
 
 # With config file
-npx @modelcontextprotocol/inspector --cli --config path/to/config.json --server myserver
+npx @darbotlabs/agent-mcp-inspector --cli --config path/to/config.json --server myserver
 
 # List available tools
-npx @modelcontextprotocol/inspector --cli node build/index.js --method tools/list
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js --method tools/list
 
 # Call a specific tool
-npx @modelcontextprotocol/inspector --cli node build/index.js --method tools/call --tool-name mytool --tool-arg key=value --tool-arg another=value2
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js --method tools/call --tool-name mytool --tool-arg key=value --tool-arg another=value2
 
 # List available resources
-npx @modelcontextprotocol/inspector --cli node build/index.js --method resources/list
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js --method resources/list
 
 # List available prompts
-npx @modelcontextprotocol/inspector --cli node build/index.js --method prompts/list
+npx @darbotlabs/agent-mcp-inspector --cli node build/index.js --method prompts/list
 
 # Connect to a remote MCP server (default is SSE transport)
-npx @modelcontextprotocol/inspector --cli https://my-mcp-server.example.com
+npx @darbotlabs/agent-mcp-inspector --cli https://my-mcp-server.example.com
 
 # Connect to a remote MCP server (with Streamable HTTP transport)
-npx @modelcontextprotocol/inspector --cli https://my-mcp-server.example.com --transport http --method tools/list
+npx @darbotlabs/agent-mcp-inspector --cli https://my-mcp-server.example.com --transport http --method tools/list
 
 # Call a tool on a remote server
-npx @modelcontextprotocol/inspector --cli https://my-mcp-server.example.com --method tools/call --tool-name remotetool --tool-arg param=value
+npx @darbotlabs/agent-mcp-inspector --cli https://my-mcp-server.example.com --method tools/call --tool-name remotetool --tool-arg param=value
 
 # List resources from a remote server
-npx @modelcontextprotocol/inspector --cli https://my-mcp-server.example.com --method resources/list
+npx @darbotlabs/agent-mcp-inspector --cli https://my-mcp-server.example.com --method resources/list
 ```
 
 ### UI Mode vs CLI Mode: When to Use Each

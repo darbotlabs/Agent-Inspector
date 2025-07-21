@@ -218,7 +218,7 @@ const Sidebar = ({
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-border">
         <div className="flex items-center">
           <h1 className="ml-2 text-lg font-semibold">
-            MCP Inspector v{version}
+            Agent MCP Inspector v{version}
           </h1>
         </div>
       </div>
@@ -674,7 +674,7 @@ const Sidebar = ({
                       return "Connection Error - Check if your MCP server is running and proxy token is correct";
                     }
                     case "error-connecting-to-proxy":
-                      return "Error Connecting to MCP Inspector Proxy - Check Console logs";
+                      return "Error Connecting to Agent MCP Inspector Proxy - Check Console logs";
                     default:
                       return "Disconnected";
                   }

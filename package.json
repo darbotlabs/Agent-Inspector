@@ -1,14 +1,14 @@
 {
-  "name": "@modelcontextprotocol/inspector",
+  "name": "@darbotlabs/agent-mcp-inspector",
   "version": "0.16.1",
-  "description": "Model Context Protocol inspector",
+  "description": "Agent MCP Inspector with Microsoft Copilot Studio integration",
   "license": "MIT",
-  "author": "Anthropic, PBC (https://anthropic.com)",
-  "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/modelcontextprotocol/inspector/issues",
+  "author": "DarbotLabs (https://github.com/darbotlabs)",
+  "homepage": "https://github.com/darbotlabs/Agent-MCP-Inspector",
+  "bugs": "https://github.com/darbotlabs/Agent-MCP-Inspector/issues",
   "type": "module",
   "bin": {
-    "mcp-inspector": "cli/build/cli.js"
+    "agent-mcp-inspector": "cli/build/cli.js"
   },
   "files": [
     "client/bin",
@@ -47,9 +47,9 @@
     "check-version": "node scripts/check-version-consistency.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/inspector-cli": "^0.16.1",
-    "@modelcontextprotocol/inspector-client": "^0.16.1",
-    "@modelcontextprotocol/inspector-server": "^0.16.1",
+    "@darbotlabs/agent-mcp-inspector-cli": "^0.16.1",
+    "@darbotlabs/agent-mcp-inspector-client": "^0.16.1",
+    "@darbotlabs/agent-mcp-inspector-server": "^0.16.1",
     "@modelcontextprotocol/sdk": "^1.13.1",
     "concurrently": "^9.0.1",
     "open": "^10.1.0",

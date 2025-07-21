@@ -1,14 +1,14 @@
 {
-  "name": "@modelcontextprotocol/inspector-server",
+  "name": "@darbotlabs/agent-mcp-inspector-server",
   "version": "0.16.1",
-  "description": "Server-side application for the Model Context Protocol inspector",
+  "description": "Server-side application for the Agent MCP Inspector with Microsoft integration",
   "license": "MIT",
-  "author": "Anthropic, PBC (https://anthropic.com)",
-  "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/modelcontextprotocol/inspector/issues",
+  "author": "DarbotLabs (https://github.com/darbotlabs)",
+  "homepage": "https://github.com/darbotlabs/Agent-MCP-Inspector",
+  "bugs": "https://github.com/darbotlabs/Agent-MCP-Inspector/issues",
   "type": "module",
   "bin": {
-    "mcp-inspector-server": "build/index.js"
+    "agent-mcp-inspector-server": "build/index.js"
   },
   "files": [
     "build"
@@ -27,9 +27,12 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "@azure/msal-node": "^3.6.3",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "@modelcontextprotocol/sdk": "^1.13.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "node-powershell": "^5.0.1",
     "ws": "^8.18.0",
     "zod": "^3.23.8"
   }

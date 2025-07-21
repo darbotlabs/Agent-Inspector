@@ -1,14 +1,14 @@
 {
-  "name": "@modelcontextprotocol/inspector-client",
+  "name": "@darbotlabs/agent-mcp-inspector-client",
   "version": "0.16.1",
-  "description": "Client-side application for the Model Context Protocol inspector",
+  "description": "Client-side application for the Agent MCP Inspector with Microsoft integration",
   "license": "MIT",
-  "author": "Anthropic, PBC (https://anthropic.com)",
-  "homepage": "https://modelcontextprotocol.io",
-  "bugs": "https://github.com/modelcontextprotocol/inspector/issues",
+  "author": "DarbotLabs (https://github.com/darbotlabs)",
+  "homepage": "https://github.com/darbotlabs/Agent-MCP-Inspector",
+  "bugs": "https://github.com/darbotlabs/Agent-MCP-Inspector/issues",
   "type": "module",
   "bin": {
-    "mcp-inspector-client": "./bin/start.js"
+    "agent-mcp-inspector-client": "./bin/start.js"
   },
   "files": [
     "bin",
@@ -25,6 +25,8 @@
     "cleanup:e2e": "node e2e/global-teardown.js"
   },
   "dependencies": {
+    "@azure/msal-browser": "^4.15.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "@modelcontextprotocol/sdk": "^1.13.1",
     "@radix-ui/react-checkbox": "^1.1.4",
     "ajv": "^6.12.6",
@@ -33,6 +35,7 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-popover": "^1.1.3",
     "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.1",
     "@radix-ui/react-toast": "^1.2.6",

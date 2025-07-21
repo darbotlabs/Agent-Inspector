@@ -46,6 +46,8 @@ import {
   Hash,
   Key,
   MessageSquare,
+  Cloud,
+  Plug,
 } from "lucide-react";
 
 import { z } from "zod";
@@ -60,6 +62,8 @@ import RootsTab from "./components/RootsTab";
 import SamplingTab, { PendingRequest } from "./components/SamplingTab";
 import Sidebar from "./components/Sidebar";
 import ToolsTab from "./components/ToolsTab";
+import { MicrosoftConfiguration } from "./components/MicrosoftConfiguration";
+import { MCPConnectorManager } from "./components/MCPConnectorManager";
 import { InspectorConfig } from "./lib/configurationTypes";
 import {
   getMCPProxyAddress,
@@ -606,6 +610,20 @@ const App = () => {
     </TabsContent>
   );
 
+  // Helper component for Microsoft Configuration
+  const MicrosoftConfigWrapper = () => (
+    <TabsContent value="microsoft">
+      <MicrosoftConfiguration />
+    </TabsContent>
+  );
+
+  // Helper component for MCP Connector Manager
+  const ConnectorManagerWrapper = () => (
+    <TabsContent value="connectors">
+      <MCPConnectorManager />
+    </TabsContent>
+  );
+
   // Helper function to render OAuth callback components
   if (window.location.pathname === "/oauth/callback") {
     const OAuthCallback = React.lazy(
@@ -688,9 +706,17 @@ const App = () => {
           {mcpClient ? (
             <Tabs
               defaultValue={
-                Object.keys(serverCapabilities ?? {}).includes(
-                  window.location.hash.slice(1),
-                )
+                [
+                  "resources",
+                  "prompts",
+                  "tools",
+                  "ping",
+                  "sampling",
+                  "roots",
+                  "auth",
+                  "microsoft",
+                  "connectors",
+                ].includes(window.location.hash.slice(1))
                   ? window.location.hash.slice(1)
                   : serverCapabilities?.resources
                     ? "resources"
@@ -745,6 +771,14 @@ const App = () => {
                 <TabsTrigger value="auth">
                   <Key className="w-4 h-4 mr-2" />
                   Auth
+                </TabsTrigger>
+                <TabsTrigger value="microsoft">
+                  <Cloud className="w-4 h-4 mr-2" />
+                  Microsoft
+                </TabsTrigger>
+                <TabsTrigger value="connectors">
+                  <Plug className="w-4 h-4 mr-2" />
+                  Connectors
                 </TabsTrigger>
               </TabsList>
 
@@ -899,6 +933,8 @@ const App = () => {
                       onRootsChange={handleRootsChange}
                     />
                     <AuthDebuggerWrapper />
+                    <MicrosoftConfigWrapper />
+                    <ConnectorManagerWrapper />
                   </>
                 )}
               </div>
