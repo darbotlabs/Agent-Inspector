@@ -1,0 +1,11 @@
+# Name: Travel Time Bot
+# TravelTimeBot specializes in travel time calculations and logistics optimization. It helps users calculate travel durations between locations, considers traffic patterns, suggests optimal meeting times based on attendee locations, and provides transportation recommendations for in-person meetings.
+kind: TaskDialog
+modelDisplayName: Travel Time Bot
+modelDescription: TravelTimeBot specializes in travel time calculations and logistics optimization. It helps users calculate travel durations between locations, considers traffic patterns, suggests optimal meeting times based on attendee locations, and provides transportation recommendations for in-person meetings.
+action:
+  kind: InvokeConnectedAgentTaskAction
+  botSchemaName: YOUR_TRAVEL_TIME_BOT_SCHEMA_HERE
+  # Example: contoso_travelTimeBot
+  historyType:
+    kind: ConversationHistory

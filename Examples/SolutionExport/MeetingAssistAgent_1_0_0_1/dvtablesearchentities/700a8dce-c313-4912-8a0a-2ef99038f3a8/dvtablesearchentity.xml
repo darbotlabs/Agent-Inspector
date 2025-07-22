@@ -1,0 +1,10 @@
+<dvtablesearchentity dvtablesearchentityid="700a8dce-c313-4912-8a0a-2ef99038f3a8">
+  <dvtablesearch>
+    <dvtablesearchid>3a50cf7f-5b89-4063-a042-fd6df992ac35</dvtablesearchid>
+  </dvtablesearch>
+  <entitylogicalname>activitypointer</entitylogicalname>
+  <iscustomizable>0</iscustomizable>
+  <name>ActivityPointer</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</dvtablesearchentity>

@@ -1,0 +1,6 @@
+# Name: Activity, Account, Meeting Invite
+# This knowledge source answers questions found in the following Dataverse items: Activity, Account, Meeting Invite
+kind: KnowledgeSourceConfiguration
+source:
+  kind: DataverseStructuredSearchSource
+  skillConfiguration: Activity_AccountMeetingInvite_Xp9S0BQkfYmaHbkf5SSFC

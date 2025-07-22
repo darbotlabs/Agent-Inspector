@@ -1,0 +1,22 @@
+{
+  "$kind": "BotConfiguration",
+  "settings": {
+    "GenerativeActionsEnabled": true
+  },
+  "isAgentConnectable": true,
+  "gPTSettings": {
+    "$kind": "GPTSettings",
+    "defaultSchemaName": "dystudio_meetMaster.gpt.default"
+  },
+  "aISettings": {
+    "$kind": "AISettings",
+    "useModelKnowledge": true,
+    "isFileAnalysisEnabled": true,
+    "isSemanticSearchEnabled": true,
+    "contentModeration": "Medium",
+    "optInUseLatestModels": true
+  },
+  "recognizer": {
+    "$kind": "GenerativeAIRecognizer"
+  }
+}

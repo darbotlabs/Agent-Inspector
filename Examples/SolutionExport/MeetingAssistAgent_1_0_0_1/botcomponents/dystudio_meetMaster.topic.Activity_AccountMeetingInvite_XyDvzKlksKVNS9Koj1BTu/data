@@ -1,0 +1,4 @@
+kind: KnowledgeSourceConfiguration
+source:
+  kind: DataverseStructuredSearchSource
+  skillConfiguration: Activity_AccountMeetingInvite_Xp9S0BQkfYmaHbkf5SSFC

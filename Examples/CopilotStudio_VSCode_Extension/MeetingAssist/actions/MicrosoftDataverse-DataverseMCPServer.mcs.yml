@@ -1,0 +1,14 @@
+# Name: Microsoft Dataverse - Dataverse MCP Server
+kind: TaskDialog
+modelDisplayName: Dataverse MCP Server
+modelDescription: "Dataverse MCP Server. This server can be used to get information from Dataverse as well as get knowledge from Dataverse and various other tabular sources. To check what all sources this server can access, use the list_knowledge_sources tool. list_knowledge_sources responsds with the source and tables that this server can access. "
+action:
+  kind: InvokeExternalAgentTaskAction
+  connectionReference: YOUR_DATAVERSE_MCP_CONNECTION_HERE
+  # Example: contoso_meetMaster.shared_commondataserviceforapps.c0ed0607f2af430588d88366e859ee97
+  connectionProperties:
+    mode: Invoker
+
+  operationDetails:
+    kind: ModelContextProtocolMetadata
+    operationId: mcp_DataverseMCPServer

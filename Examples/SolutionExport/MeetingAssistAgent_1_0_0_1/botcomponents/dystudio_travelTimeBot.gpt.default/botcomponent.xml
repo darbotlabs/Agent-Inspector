@@ -1,0 +1,11 @@
+<botcomponent schemaname="dystudio_travelTimeBot.gpt.default">
+  <componenttype>15</componenttype>
+  <description>TravelTimeBot specializes in travel time calculations and logistics optimization. It helps users calculate travel durations between locations, considers traffic patterns, suggests optimal meeting times based on attendee locations, and provides transportation recommendations for in-person meetings.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Travel Time Bot</name>
+  <parentbotid>
+    <schemaname>dystudio_travelTimeBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

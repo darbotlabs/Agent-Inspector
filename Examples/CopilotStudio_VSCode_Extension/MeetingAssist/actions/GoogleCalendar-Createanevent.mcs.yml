@@ -1,0 +1,66 @@
+# Name: Google Calendar - Create an event
+kind: TaskDialog
+response:
+  activity:
+  mode: Generated
+
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: summary
+    name: Title
+    description: A summary of the event.
+
+  - kind: AutomaticTaskInput
+    propertyName: calendarId
+    entity: DateTimePrebuiltEntity
+    inputSettings:
+      repeatCount: 0
+
+  - kind: AutomaticTaskInput
+    propertyName: start
+    name: Meeting Start time
+
+  - kind: AutomaticTaskInput
+    propertyName: end
+    name: Meeting End time
+
+  - kind: AutomaticTaskInput
+    propertyName: description
+    name: Description
+    description: Description of the event.
+
+modelDisplayName: Create an event
+modelDescription: This operation is used to create an event on a specific calendar.
+outputs:
+  - propertyName: attendees
+
+  - propertyName: creator
+
+  - propertyName: description
+
+  - propertyName: end
+
+  - propertyName: htmlLink
+
+  - propertyName: id
+
+  - propertyName: location
+
+  - propertyName: organizer
+
+  - propertyName: start
+
+  - propertyName: status
+
+  - propertyName: summary
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: YOUR_GOOGLE_CALENDAR_CONNECTION_HERE
+  # Example: contoso_meetMaster.shared_googlecalendar.956e87df53754df9b82aff1a7e29e85c
+  connectionProperties:
+    mode: Invoker
+
+  operationId: CreateEvent
+
+outputMode: All

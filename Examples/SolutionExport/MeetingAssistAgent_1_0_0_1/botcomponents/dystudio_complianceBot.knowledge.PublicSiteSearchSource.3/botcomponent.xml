@@ -1,0 +1,11 @@
+<botcomponent schemaname="dystudio_complianceBot.knowledge.PublicSiteSearchSource.3">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://learn.microsoft.com/compliance website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://learn.microsoft.com/compliance</name>
+  <parentbotid>
+    <schemaname>dystudio_complianceBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

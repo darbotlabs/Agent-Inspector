@@ -1,0 +1,10 @@
+<dvtablesearchentity dvtablesearchentityid="05d7e56f-ec80-4268-a4e0-8925934a5f94">
+  <dvtablesearch>
+    <dvtablesearchid>3a50cf7f-5b89-4063-a042-fd6df992ac35</dvtablesearchid>
+  </dvtablesearch>
+  <entitylogicalname>dystudio_meetinginvite</entitylogicalname>
+  <iscustomizable>0</iscustomizable>
+  <name>dystudio_MeetingInvite</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</dvtablesearchentity>

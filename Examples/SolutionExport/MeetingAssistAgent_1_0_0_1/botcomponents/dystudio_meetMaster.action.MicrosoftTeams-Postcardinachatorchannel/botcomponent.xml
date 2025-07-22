@@ -1,0 +1,10 @@
+<botcomponent schemaname="dystudio_meetMaster.action.MicrosoftTeams-Postcardinachatorchannel">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>Microsoft Teams - Post card in a chat or channel</name>
+  <parentbotid>
+    <schemaname>dystudio_meetMaster</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

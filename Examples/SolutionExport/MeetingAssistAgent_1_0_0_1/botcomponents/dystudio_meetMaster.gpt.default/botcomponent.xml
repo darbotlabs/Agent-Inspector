@@ -1,0 +1,11 @@
+<botcomponent schemaname="dystudio_meetMaster.gpt.default">
+  <componenttype>15</componenttype>
+  <description>An intelligent meeting scheduling agent that helps coordinate complex multi-tenant meetings, manages room booking, finds optimal time slots, sends invites, handles calendar conflicts, and provides meeting summaries. It can work with Microsoft Graph Calendar, Google Calendar, and legacy booking systems while respecting scheduling policies and time zone differences.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>MeetingAssist</name>
+  <parentbotid>
+    <schemaname>dystudio_meetMaster</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

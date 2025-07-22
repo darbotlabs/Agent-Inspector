@@ -1,0 +1,10 @@
+<dvtablesearchentity dvtablesearchentityid="70eb1547-3a4c-4c92-b73b-e2f6f63c3ca0">
+  <dvtablesearch>
+    <dvtablesearchid>3a50cf7f-5b89-4063-a042-fd6df992ac35</dvtablesearchid>
+  </dvtablesearch>
+  <entitylogicalname>account</entitylogicalname>
+  <iscustomizable>0</iscustomizable>
+  <name>Account</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</dvtablesearchentity>

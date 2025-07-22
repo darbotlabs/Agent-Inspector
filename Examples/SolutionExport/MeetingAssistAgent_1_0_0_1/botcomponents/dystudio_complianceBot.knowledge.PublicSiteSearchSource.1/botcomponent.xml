@@ -1,0 +1,11 @@
+<botcomponent schemaname="dystudio_complianceBot.knowledge.PublicSiteSearchSource.1">
+  <componenttype>16</componenttype>
+  <description>This knowledge source searches information on the web found in https://oag.ca.gov/privacy/ccpa website</description>
+  <iscustomizable>0</iscustomizable>
+  <name>https://oag.ca.gov/privacy/ccpa</name>
+  <parentbotid>
+    <schemaname>dystudio_complianceBot</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

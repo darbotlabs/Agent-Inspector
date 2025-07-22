@@ -1,0 +1,11 @@
+# Name: ComplianceBot
+# ComplianceBot is an enterprise security and compliance agent that ensures meetings adhere to GDPR, CCPA, and HIPAA regulations. It classifies meeting content, assesses risks, logs audit trails, and integrates with MeetMaster for conflict resolution.
+kind: TaskDialog
+modelDisplayName: ComplianceBot
+modelDescription: ComplianceBot is an enterprise security and compliance agent that ensures meetings adhere to GDPR, CCPA, and HIPAA regulations. It classifies meeting content, assesses risks, logs audit trails, and integrates with MeetMaster for conflict resolution.
+action:
+  kind: InvokeConnectedAgentTaskAction
+  botSchemaName: YOUR_COMPLIANCE_BOT_SCHEMA_HERE
+  # Example: contoso_complianceBot
+  historyType:
+    kind: ConversationHistory

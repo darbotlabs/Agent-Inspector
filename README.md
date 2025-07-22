@@ -336,6 +336,56 @@ npx @darbotlabs/agent-mcp-inspector --cli https://my-mcp-server.example.com --me
 | **Automation**           | N/A                                                                       | Ideal for CI/CD pipelines, batch processing, and integration with coding assistants                                                                  |
 | **Learning MCP**         | Rich visual interface helps new users understand server capabilities      | Simplified commands for focused learning of specific endpoints                                                                                       |
 
+## Examples
+
+This repository includes practical examples to help you understand and work with Microsoft Copilot Studio agents and MCP servers:
+
+### MeetingAssist - Complete Copilot Studio Agent
+
+The `MeetingAssist/` folder contains a fully functional Microsoft Copilot Studio agent that demonstrates:
+
+- **Multi-agent orchestration** with specialized bots (FacilitiesBot, ComplianceBot, TravelTimeBot)
+- **MCP server integration** for Office 365, Google Calendar, and Dataverse
+- **Corporate meeting coordination** with room booking, scheduling, and compliance
+- **Complete agent architecture** including topics, actions, and knowledge sources
+
+**Key Features:**
+- 🏢 **Room booking and resource management**
+- 📅 **Cross-platform calendar integration** (Office 365, Google Calendar)
+- 🛡️ **Compliance validation** (GDPR, CCPA, HIPAA)
+- 🌍 **Time zone optimization** and travel time calculations
+- 📊 **Dataverse integration** for audit trails and data management
+
+**Security Note:** All sensitive data has been sanitized and replaced with Contoso sample data and placeholders. See `MeetingAssist/CONFIGURATION_NOTES.md` for setup instructions.
+
+### Solution Export Example
+
+The `Examples/SolutionExport/` folder contains a complete Microsoft Power Platform solution export showing:
+
+- **Bot component structures** for multiple agents
+- **Connection reference configurations** for various Microsoft services
+- **Entity definitions** and search configurations
+- **Complete XML manifests** for solution packaging
+
+This example demonstrates how Copilot Studio agents are packaged and deployed in enterprise environments.
+
+**Security Note:** This solution export has been sanitized with Contoso branding and placeholder values. See `Examples/SolutionExport/CONFIGURATION_NOTES.md` for import instructions.
+
+### Using the Examples
+
+These examples serve multiple purposes:
+
+1. **Learning Resource**: Understand how complex Copilot Studio agents are structured
+2. **Development Template**: Use as a starting point for your own agents
+3. **Integration Guide**: See how MCP servers connect with Microsoft services
+4. **Security Reference**: Learn proper sanitization practices for sharing agent configurations
+
+To use these examples:
+1. Copy the relevant folder to your development environment
+2. Follow the configuration notes to replace placeholders with your actual values
+3. Import into your Copilot Studio or Power Platform environment
+4. Test and customize for your specific requirements
+
 ## License
 
 This project is licensed under the MIT License—see the [LICENSE](LICENSE) file for details.

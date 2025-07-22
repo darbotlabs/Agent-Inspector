@@ -1,0 +1,22 @@
+<botcomponent_connectionreferenceset>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_meetMaster.action.GoogleCalendar-Createanevent" connectionreferenceid.connectionreferencelogicalname="YOUR_GOOGLE_CALENDAR_CONNECTION_HERE">
+    <!-- Example: contoso_meetMaster.shared_googlecalendar.956e87df53754df9b82aff1a7e29e85c -->
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_meetMaster.action.MicrosoftDataverse-Addanewrowtoselectedenvironment" connectionreferenceid.connectionreferencelogicalname="YOUR_DATAVERSE_CONNECTION_HERE">
+    <!-- Example: contoso_meetMaster.shared_commondataserviceforapps.4ac1a72703c54a48bc67df40c7e37051 -->
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_meetMaster.action.MicrosoftDataverse-DataverseMCPServer" connectionreferenceid.connectionreferencelogicalname="YOUR_DATAVERSE_MCP_CONNECTION_HERE">
+    <!-- Example: contoso_meetMaster.shared_commondataserviceforapps.c0ed0607f2af430588d88366e859ee97 -->
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_meetMaster.action.MicrosoftTeams-Postcardinachatorchannel" connectionreferenceid.connectionreferencelogicalname="YOUR_TEAMS_CONNECTION_HERE">
+    <!-- Example: contoso_meetMaster.shared_teams.shared-teams-f3c6ad2e-4fd5-48a0-90f3-b5c29df8077e -->
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+  <botcomponent_connectionreference botcomponentid.schemaname="contoso_meetMaster.action.Office365Outlook-MeetingManagementMCPServer" connectionreferenceid.connectionreferencelogicalname="YOUR_OFFICE365_CONNECTION_HERE">
+    <!-- Example: contoso_meetMaster.shared_office365.741423257b8d4c799d10dc425cd41697 -->
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_connectionreference>
+</botcomponent_connectionreferenceset>

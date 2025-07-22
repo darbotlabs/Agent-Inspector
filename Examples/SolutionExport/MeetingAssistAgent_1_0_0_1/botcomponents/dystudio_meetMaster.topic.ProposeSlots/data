@@ -1,0 +1,79 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - propose slots
+      - suggest time slots
+      - available time slots
+      - schedule a meeting
+      - meeting availability
+      - find open slots
+      - suggest meeting times
+      - check available times
+
+  actions:
+    - kind: SendActivity
+      id: SendActivity_3yyBQA
+      activity: |-
+        I'll help you find available meeting slots! I'm analyzing calendars across multiple systems using Microsoft Graph API and external calendar integrations.
+
+        🔍 **Checking availability across:**
+        • Office 365 calendars via Graph API
+        • Google Calendar via OAuth2 integration  
+        • Cross-tenant calendar access through Logic Apps
+        • Dataverse meeting history analysis
+
+        ⏰ **I'll propose 3-5 optimal time slots considering:**
+        • Business hours (8AM-6PM) and time zones
+        • All attendee availability conflicts
+        • Meeting duration preferences  
+        • Room capacity and resources
+
+        Let me query the calendar systems now...
+
+    - kind: Question
+      id: question_aM4MZA
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.Var1
+      prompt: "What type of meeting would you like me to schedule? Please provide details about:"
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: Team Meeting - Regular team sync and updates
+              displayName: Team Meeting - Regular team sync and updates
+
+            - id: Client Meeting - External stakeholder presentation
+              displayName: Client Meeting - External stakeholder presentation
+
+            - id: Project Review - Status updates and milestone discussions
+              displayName: Project Review - Status updates and milestone discussions
+
+    - kind: Question
+      id: question_qX9sSB
+      interruptionPolicy:
+        allowInterruption: true
+
+      variable: init:Topic.Var2
+      prompt: How long would you like the meeting to be?
+      entity:
+        kind: EmbeddedEntity
+        definition:
+          kind: ClosedListEntity
+          items:
+            - id: 30 minutes
+              displayName: 30 minutes
+
+            - id: 60 minutes
+              displayName: 60 minutes
+
+            - id: 90 minutes
+              displayName: 90 minutes
+
+inputType: {}
+outputType: {}

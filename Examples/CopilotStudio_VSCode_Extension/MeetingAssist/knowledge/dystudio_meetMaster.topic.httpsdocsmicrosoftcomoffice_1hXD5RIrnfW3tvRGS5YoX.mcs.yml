@@ -1,0 +1,6 @@
+# Name: https://docs.microsoft.com/office
+# This knowledge source searches information on the web found in https://docs.microsoft.com/office website
+kind: KnowledgeSourceConfiguration
+source:
+  kind: PublicSiteSearchSource
+  site: https://docs.microsoft.com/office

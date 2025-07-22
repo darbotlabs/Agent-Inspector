@@ -1,0 +1,49 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    triggerQueries:
+      - schedule a meeting
+      - create a meeting card
+      - set up a meeting
+      - generate adaptive card for meeting
+      - meeting invitation card
+      - design a meeting card
+      - meeting adaptive card creation
+      - build a meeting invite
+
+  actions:
+    - kind: Question
+      id: Question_Zq7vNQ
+      variable: Topic.MeetingDateTime
+      prompt: Please provide the date and time for the meeting.
+      entity: DateTimePrebuiltEntity
+
+    - kind: Question
+      id: Question_Ydrz4F
+      variable: Topic.Attendees
+      prompt: Please provide the list of attendees.
+      entity: PersonNamePrebuiltEntity
+
+    - kind: Question
+      id: Question_gzLnRY
+      variable: Topic.MeetingRoom
+      prompt: Please provide the preferred meeting room.
+      entity: StringPrebuiltEntity
+
+    - kind: SendActivity
+      id: sendActivity_iIo8q3
+      activity: Thank you! Let me search for meeting room availability and create an adaptive card with the meeting details.
+
+    - kind: SendActivity
+      id: SendActivity_xAM4AF
+      activity:
+        text:
+          - Here's your meeting invitation card with all the details. Please use the buttons below to RSVP or book the meeting room.
+        attachments:
+          - kind: AdaptiveCardTemplate
+            cardContent: "={ type: \"AdaptiveCard\", body: [ { type: \"TextBlock\", size: \"Medium\", weight: \"Bolder\", text: \"Meeting Details\" }, { type: \"FactSet\", facts: [ { title: \"Date and Time\", value: Text(Topic.MeetingDateTime) }, { title: \"Attendees\", value: Text(Topic.Attendees) }, { title: \"Meeting Room\", value: Text(Topic.MeetingRoom) } ] }, { type: \"ActionSet\", actions: [ { type: \"Action.Submit\", title: \"RSVP\" }, { type: \"Action.Submit\", title: \"Book Room\" } ] } ], '$schema': \"http://adaptivecards.io/schemas/adaptive-card.json\", version: \"1.5\"}"
+
+inputType: {}
+outputType: {}

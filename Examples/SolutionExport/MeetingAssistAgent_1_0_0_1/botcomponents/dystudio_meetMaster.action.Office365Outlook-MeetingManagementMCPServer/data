@@ -1,0 +1,12 @@
+kind: TaskDialog
+modelDisplayName: Meeting Management MCP Server
+modelDescription: This MCP server manages events, calendars and meetings
+action:
+  kind: InvokeExternalAgentTaskAction
+  connectionReference: dystudio_meetMaster.shared_office365.741423257b8d4c799d10dc425cd41697
+  connectionProperties:
+    mode: Invoker
+
+  operationDetails:
+    kind: ModelContextProtocolMetadata
+    operationId: mcp_MeetingManagement

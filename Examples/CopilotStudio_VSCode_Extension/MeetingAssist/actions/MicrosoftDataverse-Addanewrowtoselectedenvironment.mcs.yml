@@ -1,0 +1,17 @@
+# Name: Microsoft Dataverse - Add a new row to selected environment
+kind: TaskDialog
+modelDisplayName: Add a new row to selected environment
+modelDescription: Create a new row in a table in a Power Platform environment.
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: YOUR_DATAVERSE_CONNECTION_HERE
+  # Example: contoso_meetMaster.shared_commondataserviceforapps.4ac1a72703c54a48bc67df40c7e37051
+  connectionProperties:
+    mode: Invoker
+
+  operationId: CreateRecordWithOrganization
+
+outputMode: All

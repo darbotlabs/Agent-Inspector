@@ -1,0 +1,14 @@
+# Name: Office 365 Outlook - Meeting Management MCP Server
+kind: TaskDialog
+modelDisplayName: Meeting Management MCP Server
+modelDescription: This MCP server manages events, calendars and meetings
+action:
+  kind: InvokeExternalAgentTaskAction
+  connectionReference: YOUR_OFFICE365_CONNECTION_HERE
+  # Example: contoso_meetMaster.shared_office365.741423257b8d4c799d10dc425cd41697
+  connectionProperties:
+    mode: Invoker
+
+  operationDetails:
+    kind: ModelContextProtocolMetadata
+    operationId: mcp_MeetingManagement

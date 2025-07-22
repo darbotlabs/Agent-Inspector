@@ -1,0 +1,10 @@
+<botcomponent schemaname="dystudio_meetMaster.action.MicrosoftDataverse-Addanewrowtoselectedenvironment">
+  <componenttype>9</componenttype>
+  <iscustomizable>0</iscustomizable>
+  <name>Microsoft Dataverse - Add a new row to selected environment</name>
+  <parentbotid>
+    <schemaname>dystudio_meetMaster</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

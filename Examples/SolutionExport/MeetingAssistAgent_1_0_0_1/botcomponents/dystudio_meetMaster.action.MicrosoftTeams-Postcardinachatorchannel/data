@@ -1,0 +1,19 @@
+kind: TaskDialog
+modelDisplayName: Post card in a chat or channel
+modelDescription: Posts a card to a chat or a channel
+outputs:
+  - propertyName: conversationId
+
+  - propertyName: id
+
+  - propertyName: messageLink
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: dystudio_meetMaster.shared_teams.shared-teams-f3c6ad2e-4fd5-48a0-90f3-b5c29df8077e
+  connectionProperties:
+    mode: Invoker
+
+  operationId: PostCardToConversation
+
+outputMode: All

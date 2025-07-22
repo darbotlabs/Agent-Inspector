@@ -1,0 +1,63 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25072.144" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.25072.00144">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="YOUR_DATAVERSE_CONNECTION_1_HERE">
+      <!-- Example: contoso_meetMaster.shared_commondataserviceforapps.4ac1a72703c54a48bc67df40c7e37051 -->
+      <connectionreferencedisplayname>Contoso Dataverse Connection 1</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="YOUR_DATAVERSE_CONNECTION_2_HERE">
+      <!-- Example: contoso_meetMaster.shared_commondataserviceforapps.c0ed0607f2af430588d88366e859ee97 -->
+      <connectionreferencedisplayname>Contoso Dataverse Connection 2</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="YOUR_GOOGLE_CALENDAR_CONNECTION_HERE">
+      <!-- Example: contoso_meetMaster.shared_googlecalendar.956e87df53754df9b82aff1a7e29e85c -->
+      <connectionreferencedisplayname>Contoso Google Calendar Connection</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_googlecalendar</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="YOUR_OFFICE365_CONNECTION_HERE">
+      <!-- Example: contoso_meetMaster.shared_office365.741423257b8d4c799d10dc425cd41697 -->
+      <connectionreferencedisplayname>Contoso Office 365 Connection</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="YOUR_TEAMS_CONNECTION_HERE">
+      <!-- Example: contoso_meetMaster.shared_teams.shared-teams-f3c6ad2e-4fd5-48a0-90f3-b5c29df8077e -->
+      <connectionreferencedisplayname>Contoso Teams Connection</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_teams</connectorid>
+      <iscustomizable>0</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

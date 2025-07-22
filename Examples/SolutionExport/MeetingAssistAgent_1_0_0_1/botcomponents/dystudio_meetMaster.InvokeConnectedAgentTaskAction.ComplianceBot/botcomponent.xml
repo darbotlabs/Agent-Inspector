@@ -1,0 +1,11 @@
+<botcomponent schemaname="dystudio_meetMaster.InvokeConnectedAgentTaskAction.ComplianceBot">
+  <componenttype>9</componenttype>
+  <description>ComplianceBot is an enterprise security and compliance agent that ensures meetings adhere to GDPR, CCPA, and HIPAA regulations. It classifies meeting content, assesses risks, logs audit trails, and integrates with MeetMaster for conflict resolution.</description>
+  <iscustomizable>0</iscustomizable>
+  <name>ComplianceBot</name>
+  <parentbotid>
+    <schemaname>dystudio_meetMaster</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
