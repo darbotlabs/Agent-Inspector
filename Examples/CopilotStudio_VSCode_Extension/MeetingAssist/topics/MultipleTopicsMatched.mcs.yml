@@ -20,7 +20,7 @@ beginDialog:
       id: sendMessage_g5Ls09
       changeType: Add
       itemsVariable: Topic.IntentOptions
-      value: "={ DisplayName: Topic.NoneOfTheseDisplayName, TopicId: \"NoTopic\", TriggerId: \"NoTrigger\", Score: 1.0 }"
+      value: '={ DisplayName: Topic.NoneOfTheseDisplayName, TopicId: "NoTopic", TriggerId: "NoTrigger", Score: 1.0 }'
 
     - kind: Question
       id: question_zf2HhP

@@ -7,20 +7,25 @@ This folder has been sanitized to remove sensitive environment data. All configu
 ## Changes Made
 
 ### 1. Connection Configuration (`.mcs/conn.json`)
+
 - **Dataverse Endpoint**: Changed to `https://contoso.crm.dynamics.com/`
 - **Account Email**: Changed to `admin@contoso.com`
 - **Environment ID, Account ID, Tenant ID, Agent ID**: Replaced with placeholder comments
 
 ### 2. Change Token (`.mcs/changetoken.txt`)
+
 - Replaced actual token with placeholder and sample format
 
 ### 3. Settings (`settings.mcs.yml`)
+
 - **Schema Name**: Changed from `dystudio_meetMaster` to `contoso_meetMaster`
 
 ### 4. Action Connection References
+
 All action files updated to use placeholders:
+
 - Google Calendar connections
-- Microsoft Dataverse connections  
+- Microsoft Dataverse connections
 - Microsoft Teams connections
 - Office 365 Outlook connections
 - Connected agent bot schemas
@@ -30,6 +35,7 @@ All action files updated to use placeholders:
 To use this agent, you'll need to:
 
 1. **Update `.mcs/conn.json`** with your actual:
+
    - Environment ID (36-character GUID)
    - Account ID (composite ID format)
    - Tenant ID (36-character GUID)
@@ -37,10 +43,12 @@ To use this agent, you'll need to:
    - Agent Management Endpoint URL
 
 2. **Update action connection references** in `/actions/` folder:
+
    - Replace `YOUR_*_CONNECTION_HERE` with actual connection references
    - Format: `yourSchema.shared_connector.connectionId`
 
 3. **Update bot schema names** in connected agent actions:
+
    - Replace `YOUR_*_BOT_SCHEMA_HERE` with actual bot schema names
 
 4. **Generate new change token** by republishing the agent
@@ -61,7 +69,7 @@ connectionReference: contoso_meetMaster.shared_googlecalendar.956e87df53754df9b8
 # Dataverse
 connectionReference: contoso_meetMaster.shared_commondataserviceforapps.4ac1a72703c54a48bc67df40c7e37051
 
-# Teams  
+# Teams
 connectionReference: contoso_meetMaster.shared_teams.shared-teams-f3c6ad2e-4fd5-48a0-90f3-b5c29df8077e
 
 # Office 365

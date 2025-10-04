@@ -350,6 +350,7 @@ The `MeetingAssist/` folder contains a fully functional Microsoft Copilot Studio
 - **Complete agent architecture** including topics, actions, and knowledge sources
 
 **Key Features:**
+
 - 🏢 **Room booking and resource management**
 - 📅 **Cross-platform calendar integration** (Office 365, Google Calendar)
 - 🛡️ **Compliance validation** (GDPR, CCPA, HIPAA)
@@ -381,6 +382,7 @@ These examples serve multiple purposes:
 4. **Security Reference**: Learn proper sanitization practices for sharing agent configurations
 
 To use these examples:
+
 1. Copy the relevant folder to your development environment
 2. Follow the configuration notes to replace placeholders with your actual values
 3. Import into your Copilot Studio or Power Platform environment

@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "Agent MCP Inspector",
+    "description": "Advanced developer tool for testing, debugging, and creating MCP servers with Microsoft Copilot Studio integration",
+    "type": "typescript-monorepo"
+  },
+  "architecture": {
+    "client": {
+      "framework": "React",
+      "build_tool": "Vite",
+      "styling": "TailwindCSS",
+      "language": "TypeScript"
+    },
+    "server": {
+      "framework": "Express",
+      "language": "TypeScript",
+      "purpose": "MCP Proxy Server"
+    },
+    "cli": {
+      "language": "TypeScript",
+      "purpose": "Command-line MCP client"
+    }
+  },
+  "development": {
+    "node_version": ">=22.7.5",
+    "package_manager": "npm",
+    "build_command": "npm run build",
+    "dev_command": "npm run dev",
+    "test_command": "npm run test",
+    "format_command": "npm run prettier-fix"
+  },
+  "standards": {
+    "typescript": {
+      "strict": true,
+      "use_interfaces": true,
+      "prefer_explicit_types": true
+    },
+    "react": {
+      "functional_components_only": true,
+      "hooks_pattern": true,
+      "no_class_components": true
+    },
+    "styling": {
+      "use_tailwind": true,
+      "no_inline_styles": true
+    },
+    "modules": {
+      "use_es6_imports": true,
+      "no_commonjs": true
+    }
+  },
+  "security": {
+    "never_commit_tokens": true,
+    "use_environment_variables": true,
+    "validate_origin_headers": true,
+    "default_local_binding": true
+  }
+}
